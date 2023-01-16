@@ -1,4 +1,4 @@
-// 在 main.9d982.js 的开头添加如下代码
+// 在 main.9a973.js 的开头添加如下代码
 (function () {
     if (typeof window.jsb === 'object') {
         var hotUpdateSearchPaths = localStorage.getItem('HotUpdateSearchPaths');
@@ -132,7 +132,7 @@ window.boot = function () {
 if (window.jsb) {
     var isRuntime = (typeof loadRuntime === 'function');
     if (isRuntime) {
-        require('src/settings.ef18f.js');
+        require('src/settings.8c15e.js');
         require('src/cocos2d-runtime.js');
         if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
             require('src/physics.js');
@@ -140,7 +140,7 @@ if (window.jsb) {
         require('jsb-adapter/engine/index.js');
     }
     else {
-        require('src/settings.ef18f.js');
+        require('src/settings.8c15e.js');
         require('src/cocos2d-jsb.js');
         if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
             require('src/physics.js');
