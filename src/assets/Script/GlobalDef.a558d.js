@@ -1,0 +1,1 @@
+window.isgoServer=!0,isgoServer&&(window.goServer_hosts="api.yotuwin.com",window.goServer_scheme="https");
