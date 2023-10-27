@@ -43,6 +43,7 @@
 		return "245027431503594";
 	}
 	let appId = getQueryVariable("appId")
+	var userAgent = navigator.userAgent;
   window.fbAsyncInit = function() {
   FB.init({
     appId      : appId,
