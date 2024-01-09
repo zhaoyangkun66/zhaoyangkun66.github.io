@@ -1,0 +1,1 @@
+[1,0,0,[["cc.TextAsset",["_name","text"],1]],[[0,0,1,3]],[[0,"FormV","界面名\t界面路径\t切换场景是否释放\t返回是否需要开启\t是否是独立界面\tbundleName\r\nFormName\tFormPath\tFormRelease\tReturnOpen\tIndependent\tbundleName\r\ngame_Crash\tprefab/game_Crash_V\t0\tfalse\t3\tbaodian\r\nUICrashAutoSetting\tprefab/UIAutoSetting_V\t0\tfalse\t0\tbaodian"]],0,0,[],[],[]]

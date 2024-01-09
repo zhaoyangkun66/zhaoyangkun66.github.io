@@ -1,0 +1,1 @@
+[1,0,0,[["cc.JsonAsset",["_name","json"],1]],[[0,0,1,3]],[[0,"resp_gamemessage1游戏开始服务器返回",{"event_type":"resp_game_message","Head":{"Cmd":1,"Uin":0},"Body":{"StartGame":{"Seed":0,"Horse":0,"StartTime":1702454120,"PlayLeftSecond":0}}}]],0,0,[],[],[]]

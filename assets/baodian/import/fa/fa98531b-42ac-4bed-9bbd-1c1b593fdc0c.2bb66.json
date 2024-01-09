@@ -1,0 +1,1 @@
+[1,0,0,[["cc.JsonAsset",["_name","json"],1]],[[0,0,1,3]],[[0,"resp_gamemessage22下注服务器返回",{"event_type":"resp_game_message","Head":{"Cmd":22,"Uin":108228902},"Body":{"Bet":{"BetSeat":1,"BetPlayerID":108228902,"Nickname":"Santos","BetMulti":99900,"BetGold":20}}}]],0,0,[],[],[]]
