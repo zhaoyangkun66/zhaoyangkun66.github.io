@@ -1,1 +1,0 @@
-[1,0,0,[["cc.JsonAsset",["_name","json"],1]],[[0,0,1,3]],[[0,"resp_gamemessage36下注结果服务器返回",{"event_type":"resp_game_message","Head":{"Cmd":36,"Uin":0},"Body":{"DummyPlay":{"PlayerID":10025373,"PatternID":1,"Nickname":"Ernesto Vila","CardCount":3,"Cards":[126,6011,9450]}}}]],0,0,[],[],[]]

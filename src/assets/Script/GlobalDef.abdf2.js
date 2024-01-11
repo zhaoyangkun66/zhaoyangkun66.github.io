@@ -1,1 +1,0 @@
-window.isgoServer=!0,window.isPushServer=!0,isgoServer&&(isPushServer?(window.goServer_hosts1="api.yotuwin.com",window.goServer_scheme1="https",window.goServer_hosts2="columbia.yotuwin.com:8057",window.goServer_scheme2="http"):(window.goServer_hosts1="api.yotuwin.com",window.goServer_scheme1="https",window.goServer_hosts2="192.168.1.100:8090",window.goServer_scheme2="http"));

@@ -1,1 +1,0 @@
-[1,0,0,[["cc.JsonAsset",["_name","json"],1]],[[0,0,1,3]],[[0,"resp_gamemessage23一轮结束开始记时服务器返回",{"event_type":"resp_game_message","Head":{"Cmd":23,"Uin":280000},"Body":{"ChangeBanker":{"NewBankerID":280000,"Seat":0,"Compete":0,"BankerGold":0,"BetLeftSecond":9}}}]],0,0,[],[],[]]
