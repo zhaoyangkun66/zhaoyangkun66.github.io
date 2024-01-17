@@ -1,0 +1,62 @@
+
+ani_reward.png
+size: 954,686
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+gold
+  rotate: false
+  xy: 549, 366
+  size: 380, 222
+  orig: 380, 223
+  offset: 0, 0
+  index: -1
+left
+  rotate: false
+  xy: 387, 590
+  size: 251, 94
+  orig: 266, 103
+  offset: 15, 6
+  index: -1
+light
+  rotate: false
+  xy: 2, 379
+  size: 545, 209
+  orig: 551, 213
+  offset: 6, 0
+  index: -1
+star
+  rotate: false
+  xy: 2, 621
+  size: 63, 63
+  orig: 67, 67
+  offset: 2, 2
+  index: -1
+star1
+  rotate: false
+  xy: 2, 35
+  size: 475, 342
+  orig: 479, 346
+  offset: 2, 2
+  index: -1
+star2
+  rotate: false
+  xy: 479, 2
+  size: 473, 362
+  orig: 478, 366
+  offset: 2, 2
+  index: -1
+title
+  rotate: false
+  xy: 67, 594
+  size: 318, 90
+  orig: 318, 90
+  offset: 0, 0
+  index: -1
+win
+  rotate: false
+  xy: 640, 590
+  size: 207, 94
+  orig: 208, 96
+  offset: 0, 1
+  index: -1
