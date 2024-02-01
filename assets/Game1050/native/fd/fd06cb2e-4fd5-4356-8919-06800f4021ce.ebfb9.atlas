@@ -1,0 +1,55 @@
+
+prop_zuanshi.png
+size: 336,336
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+qianbi_di
+  rotate: false
+  xy: 2, 123
+  size: 204, 210
+  orig: 210, 216
+  offset: 3, 3
+  index: -1
+qianbi_qb1
+  rotate: false
+  xy: 2, 2
+  size: 121, 119
+  orig: 121, 119
+  offset: 0, 0
+  index: -1
+qianbi_qb2
+  rotate: false
+  xy: 125, 3
+  size: 119, 118
+  orig: 119, 118
+  offset: 0, 0
+  index: -1
+qianbi_qb3
+  rotate: true
+  xy: 208, 215
+  size: 118, 114
+  orig: 118, 114
+  offset: 0, 0
+  index: -1
+qianbi_sz1
+  rotate: false
+  xy: 267, 168
+  size: 57, 45
+  orig: 57, 45
+  offset: 0, 0
+  index: -1
+qianbi_sz2
+  rotate: true
+  xy: 208, 137
+  size: 28, 75
+  orig: 28, 75
+  offset: 0, 0
+  index: -1
+qianbi_sz3
+  rotate: false
+  xy: 208, 167
+  size: 57, 46
+  orig: 57, 49
+  offset: 0, 3
+  index: -1
