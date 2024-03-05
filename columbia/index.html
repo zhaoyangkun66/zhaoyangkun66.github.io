@@ -278,25 +278,12 @@ h2 {
       charset="utf-8">if (window.boot = function () { var s = window._CCSettings; window._CCSettings = void 0; var c = null, e = cc.AssetManager.BuiltinBundleName.RESOURCES, n = cc.AssetManager.BuiltinBundleName.INTERNAL, r = cc.AssetManager.BuiltinBundleName.MAIN; var i = function () { var e, n; cc.view.enableRetina(!0), cc.view.resizeWithBrowserSize(!0), cc.sys.isBrowser && (e = document.getElementById("splash"), n = e.querySelector(".progress-bar span"), c = function (e, s) { var c = 100 * e / s; n && (n.style.width = c.toFixed(2) + "%") }, e.style.display = "block", n.style.width = "0%", cc.director.once(cc.Director.EVENT_AFTER_SCENE_LAUNCH, function () { e.style.display = "none" })), cc.sys.isMobile && ("landscape" === s.orientation ? cc.view.setOrientation(cc.macro.ORIENTATION_LANDSCAPE) : "portrait" === s.orientation && cc.view.setOrientation(cc.macro.ORIENTATION_PORTRAIT), cc.view.enableAutoFullScreen(false)), cc.sys.isBrowser && cc.sys.os === cc.sys.OS_ANDROID && (cc.assetManager.downloader.maxConcurrency = 2, cc.assetManager.downloader.maxRequestsPerFrame = 2); var r = s.launchScene; cc.assetManager.bundles.find(function (e) { return e.getSceneInfo(r) }).loadScene(r, null, c, function (e, s) { if (!e && (cc.director.runSceneImmediate(s), cc.sys.isBrowser)) { document.getElementById("GameCanvas").style.visibility = ""; var c = document.getElementById("GameDiv"); c && (c.style.backgroundImage = ""), console.log("Success to load scene: " + r) } }) }, t = { id: "GameCanvas", debugMode: s.debug ? cc.debug.DebugMode.INFO : cc.debug.DebugMode.ERROR, showFPS: s.debug, frameRate: 60, groupList: s.groupList, collisionMatrix: s.collisionMatrix }; cc.assetManager.init({ bundleVers: s.bundleVers, remoteBundles: s.remoteBundles, server: s.server }); var a = [n]; s.hasResourcesBundle && a.push(e); var o = 0; function u(e) { if (e) return console.error(e.message, e.stack); ++o === a.length + 1 && cc.assetManager.loadBundle(r, function (e) { e || cc.game.run(t, i) }) } cc.assetManager.loadScript(s.jsList.map(function (e) { return "src/" + e }), u); for (var d = 0; d < a.length; d++)cc.assetManager.loadBundle(a[d], u) }, window.jsb) { var isRuntime = "function" == typeof loadRuntime; isRuntime ? (require("src/settings.a4f47.js"), require("src/cocos2d-runtime.js"), (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) && require("src/physics.js"), require("jsb-adapter/engine/index.js")) : (require("src/settings.a4f47.js"), require("src/cocos2d-jsb.js"), (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) && require("src/physics.js"), require("jsb-adapter/jsb-engine.js")), cc.macro.CLEANUP_IMAGE_CACHE = !0, window.boot() }</script>
     <!-- <script src="src/settings.22b4a.js" charset="utf-8"></script> -->
     <!-- <script src="main.c26f4.js" charset="utf-8"></script> -->
-    <!-- facebook login start-->
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          appId: '245027431503594',
-          autoLogAppEvents: true,
-          xfbml: true,
-          version: 'v14.0'
-        });
-      };
-    </script>
-    <!-- facebook login  end-->
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
     <!-- google login start-->
     <script async defer src="https://accounts.google.com/gsi/client"></script>
     <script async defer src="https://www.google.com/recaptcha/api.js"></script>
-    <script async defer src="https://telegram.org/js/telegram-widget.js" type="text/javascript"></script>
     <!-- google login  end-->
-    <script src="versionconfig.38da7.js" charset="utf-8"></script>
+    <script src="versionconfig.25ac9.js" charset="utf-8"></script>
     <script type="text/javascript">(function () {
         // Get HTML head element
         let head = document.getElementsByTagName('HEAD')[0];
