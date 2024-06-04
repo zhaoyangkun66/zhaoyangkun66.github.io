@@ -2,8 +2,8 @@ window.g_cfg = {
 	cssName: 'style-mobile.25fc5.css',
 	icoName: 'favicon.293a8.ico',
 	appleIcoName: 'favicon.35976.png',
-	settingName: 'src/settings.01fc6.js',
-	mainName: 'main.daf6b.js',
+	settingName: 'src/settings.cc20b.js',
+	mainName: 'main.549fe.js',
 	cocos2djsName: 'cocos2d-js-min.133a8.js',
 	physicsName: 'physics-min.js'
 };
