@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <script src="https://unpkg.com/@tonconnect/sdk@latest/dist/tonconnect-sdk.min.js"></script>
-    <script src="https://unpkg.com/tonweb@0.0.41/dist/tonweb.js"></script>
-  </head>
-  <body>
-    <script>
-      window.onload = async () => {
-        window.connector = new TonConnectSDK.TonConnect({
-          manifestUrl: 'https://ratingers.pythonanywhere.com/ratelance/tonconnect-manifest.json'
-        });
-        connector.restoreConnection();
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://unpkg.com/@tonconnect/sdk@latest/dist/tonconnect-sdk.min.js"></script>
+  <script src="https://unpkg.com/tonweb@0.0.41/dist/tonweb.js"></script>
+</head>
+
+<body>
+  <script>
+    window.onload = async () => {
+      const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+        manifestUrl: 'https://ratingers.pythonanywhere.com/ratelance/tonconnect-manifest.json',
+        buttonRootId: 'ton-connect'
+      });
+      async function connectToWallet() {
+        const connectedWallet = await tonConnectUI.connectWallet();
+        // Do something with connectedWallet if needed
+        console.log(connectedWallet);
       }
-    </script>
-  </body>
+
+      // Call the function
+      connectToWallet().catch(error => {
+        console.error("Error connecting to wallet:", error);
+      });
+
+    }
+  </script>
+</body>
+
 </html>
