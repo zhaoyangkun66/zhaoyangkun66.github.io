@@ -14,19 +14,18 @@
         manifestUrl: 'https://zhaoyangkun66.github.io/test/tonconnect-manifest.json',
         buttonRootId: 'ton-connect'
       });
+      tonConnectUI.uiOptions = {
+        twaReturnUrl: 'https://t.me/qwewqeTetrisBot/minitestapp'
+      };
       async function connectToWallet() {
         const connectedWallet = await tonConnectUI.connectWallet();
         // Do something with connectedWallet if needed
         console.log(connectedWallet);
       }
-
       // Call the function
       connectToWallet().catch(error => {
         console.error("Error connecting to wallet:", error);
       });
-tonConnectUI.uiOptions = {
-      twaReturnUrl: 'https://t.me/qwewqeTetrisBot/minitestapp'
-  };
     }
   </script>
 </body>
