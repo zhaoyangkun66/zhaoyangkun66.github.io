@@ -3,15 +3,16 @@
 
 <head>
   <meta charset="utf-8">
-  <script src="https://unpkg.com/@tonconnect/sdk@latest/dist/tonconnect-sdk.min.js"></script>
+  <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
   <script src="https://unpkg.com/tonweb@0.0.41/dist/tonweb.js"></script>
 </head>
 
 <body>
+  <div id="ton-connect"></div>
   <script>
     window.onload = async () => {
       const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-        manifestUrl: 'https://ratingers.pythonanywhere.com/ratelance/tonconnect-manifest.json',
+        manifestUrl: 'https://zhaoyangkun66.github.io/test/tonconnect-manifest.json',
         buttonRootId: 'ton-connect'
       });
       async function connectToWallet() {
