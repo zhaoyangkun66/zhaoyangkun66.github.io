@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display Current URL</title>
+    <script>
+        function displayURL() {
+            const AdController = window.Adsgram.init({ blockId: "4159" })
+            AdController.show().then((result) => {
+                // user watch ad till the end
+                // your code to reward user
+            }).catch((result) => {
+                // user get error during playing ad or skip ad
+                // do nothing or whatever you want
+            })
+
+
+            document.getElementById("currentURL").textContent = window.location.href;
+        }
+    </script>
+</head>
+
+<body onload="displayURL()">
+    <script src="https://sad.adsgram.ai/js/sad.min.js"></script>
+    <p>当前URL是：<span id="currentURL"></span></p>
+
+</body>
+
+</html>
