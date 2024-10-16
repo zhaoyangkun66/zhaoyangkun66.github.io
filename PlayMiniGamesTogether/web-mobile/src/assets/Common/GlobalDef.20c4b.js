@@ -1,0 +1,1 @@
+cc.sys.platform=cc.sys.MOBILE_BROWSER,window.channelIDNewbieBonusShow=!1,window.isgoServer=!0,window.channelIDGlobal=1,window.isPushServer=!0,window.is2048Game=!1,window.tonConnectUI=null,isPushServer?(window.goServer_hosts1="api.playtogetherhub.com",window.goServer_scheme1="https"):(window.goServer_hosts1="192.168.1.36:8081",window.goServer_scheme1="http");
