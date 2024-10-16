@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+	<meta property="fb:app_id" content="245027431503594">
+	<meta property="og:url" content="https://www.playtogetherhub.com/">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="You can easily earn TON coins by playing games, come and try it">
+	<meta property="og:description" content="You can easily earn TON coins by playing games, come and try it">
+	<meta property="og:image" content="https://zhaoyangkun66.github.io/PlayMiniGamesTogether/uploads/notice_image/01.png">
+
+	<meta property="url" content="https://www.playtogetherhub.com/">
+	<meta property="type" content="article">
+	<meta property="title" content="You can easily earn TON coins by playing games, come and try it">
+	<meta property="description" content="You can easily earn TON coins by playing games, come and try it">
+	<meta property="image" content="https://zhaoyangkun66.github.io/PlayMiniGamesTogether/uploads/notice_image/01.png">
+	<meta itemprop="image" content="https://zhaoyangkun66.github.io/PlayMiniGamesTogether/uploads/notice_image/01.png">
+    <script>
+        function setRandomImage() {
+            // 这里假设你有一个图片数组
+            var imagesArray = [
+                "https://zhaoyangkun66.github.io/PlayMiniGamesTogether/uploads/notice_image/01.png",
+                "https://zhaoyangkun66.github.io/PlayMiniGamesTogether/uploads/notice_image/02.png",
+                "https://zhaoyangkun66.github.io/PlayMiniGamesTogether/uploads/notice_image/03.png",
+                "https://zhaoyangkun66.github.io/PlayMiniGamesTogether/uploads/notice_image/04.png"
+            ];
+            
+            // 从数组中随机选择一个图片地址
+            var randomImage = imagesArray[Math.floor(Math.random() * imagesArray.length)];
+            
+            // 设置meta标签的内容
+            document.querySelector('meta[property="og:image"]').setAttribute('content', randomImage);
+			document.querySelector('meta[property="image"]').setAttribute('content', randomImage);
+			document.querySelector('meta[itemprop="image"]').setAttribute('content', randomImage);
+        }
+        
+        // 页面加载完成后执行
+        window.onload = setRandomImage;
+    </script>
+</head>
+<body>
+
+</body>
+</html>
