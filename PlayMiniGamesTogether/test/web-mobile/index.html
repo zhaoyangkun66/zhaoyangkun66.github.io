@@ -1,23 +1,14 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>禁止滚动</title>
-<style>
-  body, html {
-    height: 100%;
-    overflow: hidden; /* 禁止滚动 */
-  }
-</style>
+    <title>父页面</title>
+    <script type="text/javascript">
+        function showMessage(message) {
+            alert('父页面收到消息: ' + message);
+        }
+    </script>
 </head>
 <body>
-  <p>向下滚动将无法工作。</p>
-  <script>
-    // 禁用鼠标滚轮
-    document.addEventListener('wheel', function(event) {
-      event.preventDefault();
-    }, { passive: false });
-  </script>
+    <iframe src="https://zhaoyangkun66.github.io/PlayMiniGamesTogether/test/web-mobile/indexZ.html"></iframe>
 </body>
 </html>
