@@ -6,11 +6,12 @@
     <script type="text/javascript">
         function callParentFunction() {
             window.top.postMessage({
-                ADType: 1
+                ADType: 1 //1视频激励广告//展示广高告
             }, "*")
         }
         window.addEventListener("message", function (e) {
-            var data = e.data;
+            var data = e.data.ADType;//1视频激励广告//展示广高告
+            var data = e.data.resultDone;//true用户看完广告false用户没看完广告
             alert("haha");
         });
     </script>
