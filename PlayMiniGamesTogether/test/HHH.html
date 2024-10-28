@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Draggable Button</title>
+<style>
+#myButton {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  user-select: none;
+}
+</style>
+</head>
+<body>
+ 
+<button id="myButton">Drag me!</button>
+ 
+<script>
+const button = document.getElementById('myButton');
+let isDragging = false;
+ 
+button.addEventListener('mousedown', function(e) {
+  isDragging = true;
+  button.style.opacity = '0.5';
+});
+ 
+document.addEventListener('mouseup', function(e) {
+  isDragging = false;
+  button.style.opacity = '1';
+});
+ 
+document.addEventListener('mousemove', function(e) {
+  if (isDragging) {
+    button.style.left = e.pageX + 'px';
+    button.style.top = e.pageY + 'px';
+  }
+});
+</script>
+ 
+</body>
+</html>
