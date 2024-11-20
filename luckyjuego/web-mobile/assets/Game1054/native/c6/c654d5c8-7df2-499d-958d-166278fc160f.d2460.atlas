@@ -1,0 +1,132 @@
+
+btn_clicked.png
+size: 1751, 543
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+light1
+  rotate: true
+  xy: 1569, 368
+  size: 173, 180
+  orig: 325, 306
+  offset: 80, 47
+  index: -1
+light2
+  rotate: false
+  xy: 1386, 51
+  size: 198, 214
+  orig: 325, 306
+  offset: 69, 42
+  index: -1
+light3
+  rotate: true
+  xy: 240, 14
+  size: 220, 207
+  orig: 325, 306
+  offset: 59, 36
+  index: -1
+light4
+  rotate: false
+  xy: 2, 9
+  size: 236, 225
+  orig: 325, 306
+  offset: 50, 32
+  index: -1
+light5
+  rotate: true
+  xy: 854, 2
+  size: 256, 257
+  orig: 325, 306
+  offset: 43, 7
+  index: -1
+light6
+  rotate: false
+  xy: 1133, 267
+  size: 272, 274
+  orig: 325, 306
+  offset: 34, 0
+  index: -1
+light7
+  rotate: true
+  xy: 449, 2
+  size: 248, 257
+  orig: 325, 306
+  offset: 33, 26
+  index: -1
+light8
+  rotate: true
+  xy: 1113, 2
+  size: 258, 271
+  orig: 325, 306
+  offset: 28, 18
+  index: -1
+light9
+  rotate: true
+  xy: 2, 236
+  size: 305, 277
+  orig: 325, 306
+  offset: 20, 14
+  index: -1
+pattern1
+  rotate: false
+  xy: 1386, 6
+  size: 177, 43
+  orig: 292, 176
+  offset: 60, 63
+  index: -1
+pattern2
+  rotate: true
+  xy: 708, 4
+  size: 248, 144
+  orig: 292, 176
+  offset: 25, 17
+  index: -1
+pattern3
+  rotate: true
+  xy: 1586, 100
+  size: 266, 159
+  orig: 292, 176
+  offset: 13, 9
+  index: -1
+pattern4
+  rotate: true
+  xy: 1407, 268
+  size: 273, 160
+  orig: 292, 176
+  offset: 10, 7
+  index: -1
+pattern5
+  rotate: true
+  xy: 965, 262
+  size: 279, 166
+  orig: 292, 176
+  offset: 7, 6
+  index: -1
+pattern6
+  rotate: true
+  xy: 802, 260
+  size: 281, 161
+  orig: 292, 176
+  offset: 9, 8
+  index: -1
+pattern7
+  rotate: true
+  xy: 626, 254
+  size: 287, 174
+  orig: 292, 176
+  offset: 5, 2
+  index: -1
+pattern8
+  rotate: true
+  xy: 281, 252
+  size: 289, 171
+  orig: 292, 176
+  offset: 3, 4
+  index: -1
+pattern9
+  rotate: true
+  xy: 454, 253
+  size: 288, 170
+  orig: 292, 176
+  offset: 4, 2
+  index: -1

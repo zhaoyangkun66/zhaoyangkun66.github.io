@@ -1,0 +1,132 @@
+
+fortune-ox_ingots.png
+size: 1363, 236
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+fx_sparkle
+  rotate: false
+  xy: 813, 3
+  size: 16, 16
+  orig: 18, 18
+  offset: 1, 1
+  index: -1
+h_i_circle
+  rotate: false
+  xy: 526, 6
+  size: 227, 228
+  orig: 227, 228
+  offset: 0, 0
+  index: -1
+h_i_fu
+  rotate: false
+  xy: 1230, 6
+  size: 108, 109
+  orig: 108, 109
+  offset: 0, 0
+  index: -1
+h_i_fu_fx01
+  rotate: false
+  xy: 1029, 7
+  size: 65, 66
+  orig: 65, 66
+  offset: 0, 0
+  index: -1
+h_i_fu_fx02
+  rotate: false
+  xy: 1096, 19
+  size: 65, 66
+  orig: 65, 66
+  offset: 0, 0
+  index: -1
+h_i_fu_fx03
+  rotate: false
+  xy: 1163, 21
+  size: 65, 66
+  orig: 65, 66
+  offset: 0, 0
+  index: -1
+h_i_fu_fx04
+  rotate: false
+  xy: 1225, 117
+  size: 65, 66
+  orig: 65, 66
+  offset: 0, 0
+  index: -1
+h_i_fu_fx05
+  rotate: false
+  xy: 1292, 117
+  size: 65, 66
+  orig: 65, 66
+  offset: 0, 0
+  index: -1
+h_i_fu_sha
+  rotate: false
+  xy: 2, 2
+  size: 260, 232
+  orig: 264, 236
+  offset: 2, 2
+  index: -1
+h_i_fu_sha_mg
+  rotate: false
+  xy: 264, 2
+  size: 260, 232
+  orig: 264, 236
+  offset: 2, 2
+  index: -1
+h_i_ingot_L_Back
+  rotate: false
+  xy: 1225, 185
+  size: 136, 49
+  orig: 136, 51
+  offset: 0, 2
+  index: -1
+h_i_ingot_L_Front
+  rotate: true
+  xy: 1124, 89
+  size: 145, 99
+  orig: 148, 103
+  offset: 2, 1
+  index: -1
+h_i_ingot_R_Back
+  rotate: false
+  xy: 868, 5
+  size: 159, 55
+  orig: 165, 59
+  offset: 3, 4
+  index: -1
+h_i_ingot_R_Front
+  rotate: true
+  xy: 868, 62
+  size: 172, 102
+  orig: 176, 103
+  offset: 2, 1
+  index: -1
+h_i_ingot_T_Back
+  rotate: true
+  xy: 1068, 87
+  size: 147, 54
+  orig: 158, 58
+  offset: 5, 4
+  index: -1
+h_i_ingot_T_Front
+  rotate: true
+  xy: 972, 75
+  size: 159, 94
+  orig: 160, 96
+  offset: 1, 0
+  index: -1
+h_i_table_B
+  rotate: true
+  xy: 813, 21
+  size: 213, 53
+  orig: 220, 67
+  offset: 3, 12
+  index: -1
+h_i_table_F
+  rotate: true
+  xy: 755, 12
+  size: 222, 56
+  orig: 227, 58
+  offset: 2, 2
+  index: -1
