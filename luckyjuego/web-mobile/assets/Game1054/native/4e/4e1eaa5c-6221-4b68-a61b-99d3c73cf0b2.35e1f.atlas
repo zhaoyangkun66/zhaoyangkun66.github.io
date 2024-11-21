@@ -1,0 +1,139 @@
+
+btn_normal.png
+size: 717, 1035
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+light_1
+  rotate: true
+  xy: 350, 101
+  size: 88, 102
+  orig: 145, 147
+  offset: 0, 42
+  index: -1
+light_2
+  rotate: false
+  xy: 2, 18
+  size: 112, 123
+  orig: 145, 147
+  offset: 0, 21
+  index: -1
+light_3
+  rotate: true
+  xy: 454, 13
+  size: 127, 134
+  orig: 145, 147
+  offset: 1, 9
+  index: -1
+light_4
+  rotate: false
+  xy: 458, 142
+  size: 143, 143
+  orig: 145, 147
+  offset: 1, 1
+  index: -1
+light_5
+  rotate: false
+  xy: 214, 45
+  size: 134, 144
+  orig: 145, 147
+  offset: 10, 2
+  index: -1
+light_6
+  rotate: false
+  xy: 590, 2
+  size: 118, 137
+  orig: 145, 147
+  offset: 26, 2
+  index: -1
+light_7
+  rotate: false
+  xy: 603, 141
+  size: 109, 144
+  orig: 145, 147
+  offset: 35, 2
+  index: -1
+light_8
+  rotate: true
+  xy: 350, 29
+  size: 70, 102
+  orig: 145, 147
+  offset: 74, 3
+  index: -1
+norm_light_1
+  rotate: false
+  xy: 2, 393
+  size: 248, 210
+  orig: 253, 217
+  offset: 3, 3
+  index: -1
+norm_light_10
+  rotate: false
+  xy: 253, 608
+  size: 252, 210
+  orig: 253, 217
+  offset: 0, 7
+  index: -1
+norm_light_11
+  rotate: false
+  xy: 214, 191
+  size: 242, 200
+  orig: 253, 217
+  offset: 5, 14
+  index: -1
+norm_light_2
+  rotate: true
+  xy: 507, 785
+  size: 248, 208
+  orig: 253, 217
+  offset: 3, 5
+  index: -1
+norm_light_3
+  rotate: true
+  xy: 2, 143
+  size: 248, 210
+  orig: 253, 217
+  offset: 3, 3
+  index: -1
+norm_light_4
+  rotate: false
+  xy: 2, 820
+  size: 252, 213
+  orig: 253, 217
+  offset: 1, 1
+  index: -1
+norm_light_5
+  rotate: false
+  xy: 256, 820
+  size: 249, 213
+  orig: 253, 217
+  offset: 3, 1
+  index: -1
+norm_light_6
+  rotate: true
+  xy: 503, 287
+  size: 247, 211
+  orig: 253, 217
+  offset: 3, 2
+  index: -1
+norm_light_7
+  rotate: false
+  xy: 253, 393
+  size: 248, 213
+  orig: 253, 217
+  offset: 4, 0
+  index: -1
+norm_light_8
+  rotate: false
+  xy: 2, 605
+  size: 249, 213
+  orig: 253, 217
+  offset: 3, 2
+  index: -1
+norm_light_9
+  rotate: true
+  xy: 507, 536
+  size: 247, 208
+  orig: 253, 217
+  offset: 4, 6
+  index: -1
