@@ -5,96 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IndexedDB Example</title>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    // 打开或创建数据库
-    const dbName = 'myDatabase';
-    const dbVersion = 1;
 
-    const request = indexedDB.open(dbName, dbVersion);
-
-    request.onerror = function(event) {
-        console.error("Database error: " + event.target.errorCode);
-    };
-
-    request.onsuccess = function(event) {
-        console.log("Successfully opened database.");
-
-        const db = event.target.result;
-
-        // 添加数据
-        addData(db);
-
-        // 读取数据
-        readData(db);
-
-        // 删除数据
-        //deleteData(db);
-
-        // 关闭数据库连接
-        db.close();
-    };
-
-    request.onupgradeneeded = function(event) {
-        console.log("Database upgrade needed.");
-
-        const db = event.target.result;
-
-        // 创建对象存储区
-        if (!db.objectStoreNames.contains('myObjectStore')) {
-            db.createObjectStore('myObjectStore', { keyPath: 'id' });
-        }
-    };
-
-    function addData(db) {
-        const transaction = db.transaction(['myObjectStore'], 'readwrite');
-        const store = transaction.objectStore('myObjectStore');
-
-        const request = store.add({ id: 1, name: 'John Doe', age: 30 });
-
-        request.onsuccess = function(event) {
-            console.log("Data added successfully.");
-        };
-
-        request.onerror = function(event) {
-            console.error("Error adding data: " + event.target.errorCode);
-        };
-    }
-
-    function readData(db) {
-        const transaction = db.transaction(['myObjectStore'], 'readonly');
-        const store = transaction.objectStore('myObjectStore');
-
-        const request = store.get(1);
-
-        request.onsuccess = function(event) {
-            const data = event.target.result;
-            if (data) {
-                console.log("Data retrieved:", data);
-            } else {
-                console.log("No data found.");
-            }
-        };
-
-        request.onerror = function(event) {
-            console.error("Error retrieving data: " + event.target.errorCode);
-        };
-    }
-
-    function deleteData(db) {
-        const transaction = db.transaction(['myObjectStore'], 'readwrite');
-        const store = transaction.objectStore('myObjectStore');
-
-        const request = store.delete(1);
-
-        request.onsuccess = function(event) {
-            console.log("Data deleted successfully.");
-        };
-
-        request.onerror = function(event) {
-            console.error("Error deleting data: " + event.target.errorCode);
-        };
-    }
-});
+if ("webauthn" in navigator) {
+  navigator.webauthn.createCredential(options)
+    .then(function(credential) {
+      // 这里的credential就是用户的指纹信息，通常需要发送到服务器端进行注册
+      console.log(credential);
+    })
+    .catch(function(error) {
+      console.error("生成凭据错误: ", error);
+    });
+} else {
+  console.error("浏览器不支持WebAuthn");
+}
 </script>
 </head>
 <body>
