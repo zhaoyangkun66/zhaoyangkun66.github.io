@@ -15,6 +15,15 @@
             alert("haha");
         });
     </script>
+	<script async src="https://tganalytics.xyz/index.js" onload="initAnalytics()" type="text/javascript"></script>
+  <script>
+    function initAnalytics() {
+      window.telegramAnalytics.init({
+        token: 'eyJhcHBfbmFtZSI6IlBsYXlUb2dldGhlciIsImFwcF91cmwiOiJodHRwczovL3QubWUvUGxheU1pbmlHYW1lc1RvZ2V0aGVyYm90L1BsYXlNaW5pR2FtZXNUb2dldGhlciIsImFwcF9kb21haW4iOiJodHRwczovL3d3dy5wbGF5dG9nZXRoZXJodWIuY29tLyJ9!rM9otGP0bRRp4R1LbfHbvsiXToN1WaQZfNhuKwwQOAg=', // SDK Auth token received via @DataChief_bot
+        appName: 'PlayTogether', // The analytics identifier you entered in @DataChief_bot
+      });
+    }
+  </script>
 </head>
 
 <body>
