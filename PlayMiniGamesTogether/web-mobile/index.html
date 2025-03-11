@@ -281,7 +281,7 @@ h2 {
   <script src="https://sad.adsgram.ai/js/sad.min.js"></script>
   <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
-  <script src="versionconfig.518f3.js" charset="utf-8"></script>
+  <script src="versionconfig.883dd.js" charset="utf-8"></script>
   <script type="text/javascript">(function () {
       // Get HTML head element
       let head = document.getElementsByTagName('HEAD')[0];
@@ -340,6 +340,15 @@ h2 {
       loadScript(g_cfg.settingName, cb2);
 
     })();</script>
+  <script async src="https://tganalytics.xyz/index.js" onload="initAnalytics()" type="text/javascript"></script>
+  <script>
+    function initAnalytics() {
+      window.telegramAnalytics.init({
+        token: '7689783026:AAGQDuzRLhi32CqtZZrLWS-vs6ZpzArHvuw', // SDK Auth token received via @DataChief_bot
+        appName: 'PlayTogether', // The analytics identifier you entered in @DataChief_bot
+      });
+    }
+  </script>
 </body>
 
 </html>
