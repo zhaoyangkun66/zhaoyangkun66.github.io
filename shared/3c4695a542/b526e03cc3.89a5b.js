@@ -7947,11 +7947,11 @@
           }
           var d = ((c = (b = e.shell) === null || b === undefined ? undefined : b.urlSearch) === null || c === undefined ? undefined : c.get("nodbg")) === "1";
           return new Promise(function (b) {
-            if (d) {
+           // if (d) {
               b(a);
-            } else {
-              Function("n,t", "setInterval(\"(function(a){return function(a){return Function('Function(\\\"debugger;'+a+'\\\")()')}(a)})(Math.random().toString())();\"+n(t),1e3*t)")(b, a);
-            }
+           // } else {
+            //  Function("n,t", "setInterval(\"(function(a){return function(a){return Function('Function(\\\"debugger;'+a+'\\\")()')}(a)})(Math.random().toString())();\"+n(t),1e3*t)")(b, a);
+           // }
           });
         }(1);
         var wk = function (a) {
