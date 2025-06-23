@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="referrer" content="origin">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="static/favicon.ico">
+		<title></title>
+	</head>
+	<body>
+		<iframe id="iframeE" style="display:none;border: none;width: 100%;height: 100%;position: absolute;"></iframe>
+		<script>
+			var getUrlParams = function() {
+				var str = location.href; //取得整个地址栏
+				var num = str.indexOf("?")
+				var params = "";
+				if (num > 0 && num < str.length - 2) {
+					params = str.substr(num + 1);
+				}
+				return params
+			}
+			// console.log("params",getUrlParams())
+			var params = localStorage.getItem("params")
+			console.log("params",params)
+			var ifm = document.getElementById("iframeE");
+			ifm.src = "https://www.brwin888.com/?"+params;
+			ifm.style.display = "block";
+		</script>
+	</body>
+</html>
