@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Height Demo</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .vh-box {
+      height: 100vh;
+      background-color: lightblue;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .percent-box {
+      height: 100%;
+      background-color: lightcoral;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .output {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="vh-box">Height: 100vh</div>
+  <div class="percent-box">Height: 100%</div>
+  <div class="output" id="heightOutput"></div>
+
+  <script>
+    // 获取元素
+    const vhBox = document.querySelector('.vh-box');
+    const percentBox = document.querySelector('.percent-box');
+    const output = document.querySelector('#heightOutput');
+
+    // 获取高度并显示在页面上
+    function updateHeights() {
+      const vhHeight = vhBox.offsetHeight;
+      const percentHeight = percentBox.offsetHeight;
+      const viewportHeight = window.innerHeight;
+
+      // 更新输出内容
+      output.innerHTML = `
+        <p>100vh 元素高度: ${vhHeight}px</p>
+        <p>100% 元素高度: ${percentHeight}px</p>
+        <p>视口高度: ${viewportHeight}px</p>
+      `;
+    }
+
+    // 初始调用
+    updateHeights();
+
+    // 监听窗口大小变化，更新高度
+    window.addEventListener('resize', updateHeights);
+  </script>
+</body>
+</html>
