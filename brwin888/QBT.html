@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取浏览器可视区域高度和宽度</title>
+</head>
+<body>
+    <h1>浏览器可视区域尺寸</h1>
+    <p>宽度: <span id="width"></span>px</p>
+    <p>高度: <span id="height"></span>px</p>
+
+    <script>
+        // 获取浏览器可视区域宽度和高度
+        function updateViewportSize() {
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+
+            // 将值显示在页面上
+            document.getElementById('width').textContent = viewportWidth;
+            document.getElementById('height').textContent = viewportHeight;
+        }
+
+        // 初始调用
+        updateViewportSize();
+
+        // 监听窗口调整事件，实时更新尺寸
+        window.addEventListener('resize', updateViewportSize);
+    </script>
+</body>
+</html>
