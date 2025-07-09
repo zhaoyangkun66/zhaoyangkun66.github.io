@@ -1,0 +1,90 @@
+
+prop_zhuzi.png
+size: 340,340
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+zhuzi1_yezi1
+  rotate: true
+  xy: 188, 62
+  size: 37, 20
+  orig: 37, 20
+  offset: 0, 0
+  index: -1
+zhuzi1_yezi2
+  rotate: false
+  xy: 180, 10
+  size: 22, 33
+  orig: 23, 33
+  offset: 0, 0
+  index: -1
+zhuzi1_zhuzi
+  rotate: false
+  xy: 171, 151
+  size: 52, 187
+  orig: 75, 187
+  offset: 9, 0
+  index: -1
+zhuzi2_yezi1
+  rotate: true
+  xy: 204, 4
+  size: 39, 16
+  orig: 39, 16
+  offset: 0, 0
+  index: -1
+zhuzi2_yezi1_0
+  rotate: true
+  xy: 191, 112
+  size: 37, 16
+  orig: 38, 16
+  offset: 1, 0
+  index: -1
+zhuzi2_yezi2
+  rotate: true
+  xy: 154, 9
+  size: 34, 24
+  orig: 34, 24
+  offset: 0, 0
+  index: -1
+zhuzi2_yezi3
+  rotate: false
+  xy: 165, 45
+  size: 42, 15
+  orig: 42, 15
+  offset: 0, 0
+  index: -1
+zhuzi2_zhuzi
+  rotate: true
+  xy: 2, 45
+  size: 90, 161
+  orig: 91, 163
+  offset: 1, 0
+  index: -1
+zhuzi3_yezi1
+  rotate: true
+  xy: 165, 101
+  size: 34, 24
+  orig: 34, 24
+  offset: 0, 0
+  index: -1
+zhuzi3_yezi2
+  rotate: false
+  xy: 165, 62
+  size: 21, 37
+  orig: 22, 37
+  offset: 0, 0
+  index: -1
+zhuzi3_zhuzi
+  rotate: true
+  xy: 2, 2
+  size: 41, 150
+  orig: 51, 152
+  offset: 8, 2
+  index: -1
+zhuzi_di
+  rotate: false
+  xy: 2, 137
+  size: 167, 201
+  orig: 173, 207
+  offset: 3, 3
+  index: -1
