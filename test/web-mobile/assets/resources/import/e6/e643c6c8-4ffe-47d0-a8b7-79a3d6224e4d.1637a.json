@@ -1,0 +1,1 @@
+[1,0,0,[["cc.TextAsset",["_name","text"],1]],[[0,0,1,3]],[[0,"SceneInfoH","场景类型\t名称\t横竖屏(1:横屏,2:竖屏)\t背景音乐\t背景图\t场景默认开启界面\r\nScene\tName\tSceneDir\tBackGroundSound\tBackGround\tDefaultForm\r\nLogin\t登录场景\t1\t\tnone\t[\"UILoginSign\"]\r\nHall\t主场景\t1\t\tnone\t[\"UIHallTop\",\"UIMenu\",\"UIHall\"]\r\nFight\t打牌场景\t1\t\tnone\t[\"UIHallTop\",\"UIMenu\"]\r\n"]],0,0,[],[],[]]
