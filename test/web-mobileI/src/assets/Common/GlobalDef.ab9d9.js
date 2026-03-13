@@ -1,0 +1,1 @@
+window.channelIDNewbieBonusShow=!1,window.isgoServer=!0,window.noHttpBeforeFirstScreenTest=!0,window.channelIDGlobal=1,window.isPushServer=!0,window.is2048Game=!1,isPushServer?(window.goServer_hosts1="game.yotuwin.com",window.goServer_scheme1="https"):(window.goServer_hosts1="192.168.1.100:8080",window.goServer_scheme1="http");
