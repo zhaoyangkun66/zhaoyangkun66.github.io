@@ -24,7 +24,7 @@
   <!--<meta name="browsermode" content="application">-->
   <!--<link rel="apple-touch-icon" href=".png" />-->
   <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
-  <!-- <link rel="stylesheet" type="text/css" href="style-mobile.25fc5.css" /> -->
+  <!-- <link rel="stylesheet" type="text/css" href="style-mobile.4a8f0.css" /> -->
   <!-- <link rel="icon" href="favicon.293a8.ico" /> -->
   
   <meta property="fb:app_id" content="245027431503594">
@@ -183,78 +183,62 @@ h2 {
 } */
 
   /*
- * Loading Dots
- * Can we use pseudo elements here instead :after?
+ * Logo Loading
+ * 合并首屏 loading 点与品牌 logo 为单阶段视觉
  */
-  .loading span {
-    display: inline-block;
-    vertical-align: middle;
-    width: .6em;
-    height: .6em;
-    margin: .19em;
-    background: #007DB6;
-    border-radius: .6em;
-    animation: loading 1s infinite alternate;
-  }
-
-  /*
- * Dots Colors
- * Smarter targeting vs nth-of-type?
- */
-  .loading span:nth-of-type(2) {
-    background: #008FB2;
-    animation-delay: 0.2s;
-  }
-
-  .loading span:nth-of-type(3) {
-    background: #009B9E;
-    animation-delay: 0.4s;
-  }
-
-  .loading span:nth-of-type(4) {
-    background: #00A77D;
-    animation-delay: 0.6s;
-  }
-
-  .loading span:nth-of-type(5) {
-    background: #00B247;
-    animation-delay: 0.8s;
-  }
-
-  .loading span:nth-of-type(6) {
-    background: #5AB027;
-    animation-delay: 1.0s;
-  }
-
-  .loading span:nth-of-type(7) {
-    background: #A0B61E;
-    animation-delay: 1.2s;
-  }
-
-
   .loading {
-    width: 200px;
-    height: 100px;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    margin: auto
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+      radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0) 48%),
+      rgba(0, 0, 0, 0.88);
+    pointer-events: none;
+    z-index: 11;
   }
 
+  .loading .logo-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: logo-fade-pulse 1.8s ease-in-out infinite;
+  }
 
+  .loading .logo-image {
+    width: 320px;
+    max-width: 62vw;
+    height: auto;
+    filter: drop-shadow(0 0 26px rgba(255, 255, 255, 0.22));
+  }
 
-  /*
- * Animation keyframes
- * Use transition opacity instead of keyframes?
- */
-  @keyframes loading {
+  @media (max-width: 768px) {
+    .loading .logo-image {
+      width: 260px;
+      max-width: 72vw;
+    }
+  }
+
+  @keyframes logo-fade-pulse {
     0% {
-      opacity: 0;
+      opacity: 0.35;
+      transform: translateY(8px) scale(0.98);
+    }
+
+    50% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
     }
 
     100% {
-      opacity: 1;
+      opacity: 0.35;
+      transform: translateY(8px) scale(0.98);
     }
   }
 </style>
@@ -265,25 +249,16 @@ h2 {
   </div>
 
   <div class="loading" id="loading">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+    <div class="logo-wrap">
+      <img class="logo-image" src="splash.0b9cb.png" alt="logo" />
+    </div>
+  </div>
 
     <script
-      charset="utf-8">if (window.boot = function () { var s = window._CCSettings; window._CCSettings = void 0; var c = null, e = cc.AssetManager.BuiltinBundleName.RESOURCES, n = cc.AssetManager.BuiltinBundleName.INTERNAL, r = cc.AssetManager.BuiltinBundleName.MAIN; var i = function () { var e, n; cc.view.enableRetina(!0), cc.view.resizeWithBrowserSize(!0), cc.sys.isBrowser && (e = document.getElementById("splash"), n = e.querySelector(".progress-bar span"), c = function (e, s) { var c = 100 * e / s; n && (n.style.width = c.toFixed(2) + "%") }, e.style.display = "block", n.style.width = "0%", cc.director.once(cc.Director.EVENT_AFTER_SCENE_LAUNCH, function () { e.style.display = "none" })), cc.sys.isMobile && ("landscape" === s.orientation ? cc.view.setOrientation(cc.macro.ORIENTATION_LANDSCAPE) : "portrait" === s.orientation && cc.view.setOrientation(cc.macro.ORIENTATION_PORTRAIT), cc.view.enableAutoFullScreen(false)), cc.sys.isBrowser && cc.sys.os === cc.sys.OS_ANDROID && (cc.assetManager.downloader.maxConcurrency = 2, cc.assetManager.downloader.maxRequestsPerFrame = 2); var r = s.launchScene; cc.assetManager.bundles.find(function (e) { return e.getSceneInfo(r) }).loadScene(r, null, c, function (e, s) { if (!e && (cc.director.runSceneImmediate(s), cc.sys.isBrowser)) { document.getElementById("GameCanvas").style.visibility = ""; var c = document.getElementById("GameDiv"); c && (c.style.backgroundImage = ""), console.log("Success to load scene: " + r) } }) }, t = { id: "GameCanvas", debugMode: s.debug ? cc.debug.DebugMode.INFO : cc.debug.DebugMode.ERROR, showFPS: s.debug, frameRate: 60, groupList: s.groupList, collisionMatrix: s.collisionMatrix }; cc.assetManager.init({ bundleVers: s.bundleVers, remoteBundles: s.remoteBundles, server: s.server }); var a = [n]; s.hasResourcesBundle && a.push(e); var o = 0; function u(e) { if (e) return console.error(e.message, e.stack); ++o === a.length + 1 && cc.assetManager.loadBundle(r, function (e) { e || cc.game.run(t, i) }) } cc.assetManager.loadScript(s.jsList.map(function (e) { return "src/" + e }), u); for (var d = 0; d < a.length; d++)cc.assetManager.loadBundle(a[d], u) }, window.jsb) { var isRuntime = "function" == typeof loadRuntime; isRuntime ? (require("src/settings.a4f47.js"), require("src/cocos2d-runtime.js"), (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) && require("src/physics.js"), require("jsb-adapter/engine/index.js")) : (require("src/settings.a4f47.js"), require("src/cocos2d-jsb.js"), (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) && require("src/physics.js"), require("jsb-adapter/jsb-engine.js")), cc.macro.CLEANUP_IMAGE_CACHE = !0, window.boot() }</script>
+      charset="utf-8">if (window.boot = function () { var s = window._CCSettings; window._CCSettings = void 0; var c = null, e = cc.AssetManager.BuiltinBundleName.RESOURCES, n = cc.AssetManager.BuiltinBundleName.INTERNAL, r = cc.AssetManager.BuiltinBundleName.MAIN; var i = function () { var e, n, l; cc.view.enableRetina(!0), cc.view.resizeWithBrowserSize(!0), cc.sys.isBrowser && (e = document.getElementById("splash"), n = e.querySelector(".progress-bar span"), c = function (e, s) { var c = 100 * e / s; n && (n.style.width = c.toFixed(2) + "%") }, e.style.display = "block", n.style.width = "0%", cc.director.once(cc.Director.EVENT_AFTER_SCENE_LAUNCH, function () { e.style.display = "none" })), cc.sys.isMobile && ("landscape" === s.orientation ? cc.view.setOrientation(cc.macro.ORIENTATION_LANDSCAPE) : "portrait" === s.orientation && cc.view.setOrientation(cc.macro.ORIENTATION_PORTRAIT), cc.view.enableAutoFullScreen(false)), cc.sys.isBrowser && (l = cc.sys.isMobile ? 4 : 8, cc.sys.os === cc.sys.OS_ANDROID && (l = 3), cc.assetManager.downloader.maxConcurrency = l, cc.assetManager.downloader.maxRequestsPerFrame = l); var r = s.launchScene; cc.assetManager.bundles.find(function (e) { return e.getSceneInfo(r) }).loadScene(r, null, c, function (e, s) { if (!e && (cc.director.runSceneImmediate(s), cc.sys.isBrowser)) { document.getElementById("GameCanvas").style.visibility = ""; var c = document.getElementById("GameDiv"); c && (c.style.backgroundImage = ""), console.log("Success to load scene: " + r) } }) }, t = { id: "GameCanvas", debugMode: s.debug ? cc.debug.DebugMode.INFO : cc.debug.DebugMode.ERROR, showFPS: s.debug, frameRate: 60, groupList: s.groupList, collisionMatrix: s.collisionMatrix }; cc.assetManager.init({ bundleVers: s.bundleVers, remoteBundles: s.remoteBundles, server: s.server }); var a = [n]; s.hasResourcesBundle && a.push(e); var o = 0; function u(e) { if (e) return console.error(e.message, e.stack); ++o === a.length + 1 && cc.assetManager.loadBundle(r, function (e) { e || cc.game.run(t, i) }) } cc.assetManager.loadScript(s.jsList.map(function (e) { return "src/" + e }), u); for (var d = 0; d < a.length; d++)cc.assetManager.loadBundle(a[d], u) }, window.jsb) { var isRuntime = "function" == typeof loadRuntime; isRuntime ? (require("src/settings.a4f47.js"), require("src/cocos2d-runtime.js"), (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) && require("src/physics.js"), require("jsb-adapter/engine/index.js")) : (require("src/settings.a4f47.js"), require("src/cocos2d-jsb.js"), (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) && require("src/physics.js"), require("jsb-adapter/jsb-engine.js")), cc.macro.CLEANUP_IMAGE_CACHE = !0, window.boot() }</script>
     <!-- <script src="src/settings.22b4a.js" charset="utf-8"></script> -->
     <!-- <script src="main.c26f4.js" charset="utf-8"></script> -->
-
-    <!-- google login start-->
-    <script async defer src="https://accounts.google.com/gsi/client"></script>
-    <script async defer src="https://www.google.com/recaptcha/api.js"></script>
-    <!-- google login  end-->
-    <script src="versionconfig.8487b.js" charset="utf-8"></script>
+<script src="versionconfig.7b8a9.js" charset="utf-8"></script>
     <script type="text/javascript">(function () {
         // Get HTML head element
         let head = document.getElementsByTagName('HEAD')[0];
@@ -339,21 +314,37 @@ h2 {
           });
         };
 
-        loadScript(g_cfg.settingName, cb2);
-        window.first_start_time = new Date().getTime()
-      })();</script>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8Y77YG2RNB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+                loadScript(g_cfg.settingName, cb2);
+        window.first_start_time = new Date().getTime();
 
-  gtag('config', 'G-8Y77YG2RNB');
-  if (window.localStorage && !window.localStorage.getItem('first_start_app')) {
-		window.localStorage.setItem('first_start_app', true);
-        gtag('event', 'first_start_app')
-	}
-</script>
+        // 第三方脚本延后加载，避免与 Cocos 首包竞争带宽
+        function loadThirdPartyScript(url, cb) {
+          var s = document.createElement('script');
+          s.async = true;
+          s.defer = true;
+          s.src = url;
+          s.onload = function () { cb && cb(); };
+          document.body.appendChild(s);
+        }
+
+        function initGtag() {
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function(){ dataLayer.push(arguments); };
+          gtag('js', new Date());
+          gtag('config', 'G-8Y77YG2RNB');
+          if (window.localStorage && !window.localStorage.getItem('first_start_app')) {
+            window.localStorage.setItem('first_start_app', true);
+            gtag('event', 'first_start_app');
+          }
+        }
+
+        // 启动后再注入第三方脚本，不阻塞首屏关键资源
+        setTimeout(function () {
+          // Google 登录与 reCAPTCHA 改为业务触发时按需加载，避免首屏阶段非必要请求
+          loadThirdPartyScript('https://www.googletagmanager.com/gtag/js?id=G-8Y77YG2RNB', initGtag);
+        }, 5000);
+      })();</script>
 </body>
 
 </html>
+
