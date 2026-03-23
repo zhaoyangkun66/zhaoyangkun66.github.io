@@ -1,0 +1,171 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>chat</title>
+    <link rel="stylesheet" type="text/css" href="static/lib/layui/css/layui.css">
+    <script src="static/inspinia/js/jquery-2.1.1.js"></script>
+    <script src="static/lib/layer/mobile/layer.js"></script>
+    <script src="static/lib/layui/layui.js"></script>
+    <script type="text/javascript" src="https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.1.5.2.js"></script>
+    <!--    <script src="/static/js/language.js"></script>-->
+    <style>
+        .gaIiPt {
+            padding-top: 16px !important;
+            background: #007AFF;
+        }
+    </style>
+    <!-- 这是美洽的嵌入代码 -->
+    <!-- Start of LiveChat (www.livechatinc.com) code -->
+    <script>
+        function getQueryVariable(variable) {
+            var query = decodeURIComponent(window.location.search.substring(1));
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) { return pair[1]; }
+            }
+            return "";
+        }
+        let uid = getQueryVariable("uid")
+        let nickname = getQueryVariable("nickname")
+        let channel_id = getQueryVariable("channel_id")
+        let vip_id = getQueryVariable("vip_id")
+        let license = getQueryVariable("license")
+
+        var langid = 'en-US';
+        $(function () {
+            layer.open({ type: 2, content: 'connecting to customer service ' });
+        })
+        window.__lc = window.__lc || {};
+        window.__lc.license = license;
+        window.__lc.params = [
+            { name: 'User ID', value: uid },
+            { name: 'Nickname', value: nickname },
+            { name: 'Channel Name', value: channel_id },
+        ];
+        ; (function (n, t, c) { function i(n) { return e._h ? e._h.apply(null, n) : e._q.push(n) } var e = { _q: [], _h: null, _v: "2.0", on: function () { i(["on", c.call(arguments)]) }, once: function () { i(["once", c.call(arguments)]) }, off: function () { i(["off", c.call(arguments)]) }, get: function () { if (!e._h) throw new Error("[LiveChatWidget] You can't use getters before load."); return i(["get", c.call(arguments)]) }, call: function () { i(["call", c.call(arguments)]) }, init: function () { var n = t.createElement("script"); n.async = !0, n.type = "text/javascript", n.src = "https://cdn.livechatinc.com/tracking.js", t.head.appendChild(n) } }; !n.__lc.asyncInit && e.init(), n.LiveChatWidget = n.LiveChatWidget || e }(window, document, [].slice))
+
+
+        LiveChatWidget.on('visibility_changed', function (data) {
+            if (data.visibility === 'maximized') {
+                localStorage.setItem('livechat_chat_visible', true)
+            }
+        })
+
+        var isWidgetVisible = Boolean(localStorage.getItem('livechat_chat_visible'))
+
+        //if (!isWidgetVisible) {
+        LiveChatWidget.call('maximize');
+        function onReady(initialData) {
+            // Chat Widget is ready
+            setTimeout(function () { layer.closeAll(); }, 1000);
+            var state = initialData.state
+            var customerData = initialData.customerData
+        }
+
+        LiveChatWidget.on('ready', onReady)
+        //LiveChatWidget.off('ready', onReady)
+
+        function onAvailabilityChanged(data) {
+            //console.log(data);
+            if (data.availability === 'online') {
+                // we're available to chat!
+            } else {
+                //console.log(999999999);
+                // uni.navigateBack({
+                //     delta: 1
+                // });
+            }
+        }
+
+        LiveChatWidget.on('availability_changed', onAvailabilityChanged)
+        //LiveChatWidget.off('availability_changed', onAvailabilityChanged)
+
+        function onCustomerStatusChanged(data) {
+            console.log(data);
+            switch (data.status) {
+                case 'queued':
+                    // customer is in queue
+                    break
+                case 'chatting':
+                    // customer is currently chatting
+                    break
+                case 'invited':
+                    // customer received an invitation but didn't start the chat
+                    break
+                case 'browsing':
+                    let hlen = window.history.length;
+                    if (hlen == 1) {
+                        uni.navigateBack({
+                            delta: 1
+                        });
+                    } else if (hlen == 2) {
+                        window.history.go(-1);
+                    } else if (hlen == 3) {
+                        window.history.go(-2);
+                    } else {
+                        window.history.go(-1);
+                    }
+                    // customer is in idle state, not queued, not chatting, and didn't receive an invitation
+                    break
+            }
+        }
+
+        LiveChatWidget.on('customer_status_changed', onCustomerStatusChanged)
+        //LiveChatWidget.off('customer_status_changed', onCustomerStatusChanged)
+
+        //        LiveChatWidget.call('set_session_variables', {
+        //            username: '159093636',
+        //            cart_value: '159093636'
+        //        })
+
+        let set_customer_name = channel_id + ':vip' + vip_id + ':' + uid
+        LiveChatWidget.call('set_customer_name', set_customer_name);
+
+        function onVisibilityChanged(data) {
+            switch (data.visibility) {
+                case 'maximized':
+                    console.log(111);
+                    break
+                case 'minimized':
+                    let hlen = window.history.length;
+                    if (hlen == 1) {
+                        uni.navigateBack({
+                            delta: 1
+                        });
+                    } else if (hlen == 2) {
+                        window.history.go(-1);
+                    } else if (hlen == 3) {
+                        window.history.go(-2);
+                    } else {
+                        window.history.go(-1);
+                    }
+                    console.log(22222);
+                    break
+                case 'hidden':
+
+                    console.log(333);
+                    break
+            }
+        }
+
+        LiveChatWidget.on('visibility_changed', onVisibilityChanged)
+        //LiveChatWidget.off('visibility_changed', onVisibilityChanged)
+        //}
+    </script>
+    <noscript><a href="https://www.livechatinc.com/chat-with/16287603/" rel="nofollow">Chat with us</a>, powered by <a
+            href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+
+
+    <!-- End of LiveChat code -->
+
+</head>
+
+<body>
+
+</body>
+
+</html>
