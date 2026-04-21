@@ -1,0 +1,1 @@
+cc.sys.capabilities.webp=!0,cc.Class({extends:cc.Component,properties:{},start(){}});
